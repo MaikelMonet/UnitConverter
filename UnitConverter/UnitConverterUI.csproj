@@ -7,7 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
 	  <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+	  <ApplicationIcon>icon-1024x1024.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon-1024x1024.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ConverterLibrary\ConverterLibrary.csproj" />
