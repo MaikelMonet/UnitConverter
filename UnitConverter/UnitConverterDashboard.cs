@@ -12,8 +12,7 @@ namespace UnitConverter
 
             WireUpDropDownList();
 
-            label1.BackColor = Color.Transparent;
-            label2.BackColor = Color.Transparent;
+            HeaderLabel.BackColor = Color.Transparent;
 
         }
 
