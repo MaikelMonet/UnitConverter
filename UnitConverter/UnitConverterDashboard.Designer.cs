@@ -113,6 +113,7 @@ namespace UnitConverter
             Controls.Add(HeaderLabel);
             Controls.Add(unitInput);
             Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "UnitConverterDashboard";
             Text = "Unit Converter";
