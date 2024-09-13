@@ -9,47 +9,34 @@ namespace ConverterLibrary
     public static class ConversionMethods
     {
        
-
-        public static string MilesToKilometers(double units)
+        public static string ConvertUnits(double units, string conversionRequest)
         {
-            string kilometers;
+            string output = "";
 
-            return kilometers = (units * 1.609).ToString("F2");
-        }
+            switch (conversionRequest)
+            {
+                case "Miles to Kilometers":
+                    output = (units * 1.609).ToString("F2");
+                    break;
+                case "Kilometers to Miles":
+                    output = (units / 1.609).ToString("F2");
+                    break;
+                case "Pounds to Kilograms":
+                    output = (units / 2.205).ToString("F2");
+                    break;
+                case "Kilograms to Pounds":
+                    output = (units * 2.205).ToString("F2");
+                    break;
+                case "Celcius to Farenheit":
+                    output = (units * 2.205).ToString("F2");
+                    break;
+                case "Fahrenheit to Celsius":
+                    output = ((units - 32) / 1.8).ToString("F2");
+                    break;
+            }
 
-        public static string KilometersToMiles(double units)
-        {
-            string miles;
-                
-            return miles = (units / 1.609).ToString("F2");
-        }
+            return output;
 
-        public static string PoundsToKilograms(double units)
-        {
-            string kilograms;
-
-            return kilograms = (units / 2.205).ToString("F2");
-        }
-
-        public static string KilogramsToPounds(double units)
-        {
-            string pounds;
-
-            return pounds = (units * 2.205).ToString("F2");
-        }
-
-        public static string CelsiusToFahrenheit(double units)
-        {
-            string fahrenheit;
-
-            return fahrenheit = ((units * 1.8) + 32).ToString("F2");
-        }
-
-        public static string FahrenheitToCelsius(double units)
-        {
-            string celsius;
-
-            return celsius = ((units - 32) / 1.8).ToString("F2");
         }
     }
 }

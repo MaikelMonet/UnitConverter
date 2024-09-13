@@ -20,7 +20,7 @@ namespace UnitConverter
         {
             if (DataValidation())
             {
-                ConvertUnits();
+                unitOutput.Text = ConversionMethods.ConvertUnits(double.Parse(unitInput.Text), conversionMethodDropDownBox.SelectedItem.ToString());
 
             }  
         }
@@ -31,7 +31,7 @@ namespace UnitConverter
 
             if (canConvert == false)
             {
-                MessageBox.Show("Please enter a valid amount");
+                MessageBox.Show("Please enter a valid amount", "Invalid value!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
            
@@ -50,30 +50,5 @@ namespace UnitConverter
             conversionMethodDropDownBox.DataSource = methods;
         }
 
-        private void ConvertUnits()
-        {
-
-            switch (conversionMethodDropDownBox.SelectedItem)
-            {
-                case "Miles to Kilometers":
-                    unitOutput.Text = ConversionMethods.MilesToKilometers(double.Parse(unitInput.Text));
-                    break;
-                case "Kilometers to Miles":
-                    unitOutput.Text = ConversionMethods.KilometersToMiles(double.Parse(unitInput.Text));
-                    break;
-                case "Pounds to Kilograms":
-                    unitOutput.Text = ConversionMethods.PoundsToKilograms(double.Parse(unitInput.Text));
-                    break;
-                case "Kilograms to Pounds":
-                    unitOutput.Text = ConversionMethods.KilogramsToPounds(double.Parse(unitInput.Text));
-                    break;
-                case "Celcius to Farenheit":
-                    unitOutput.Text = ConversionMethods.CelsiusToFahrenheit(double.Parse(unitInput.Text));
-                    break;
-                case "Fahrenheit to Celsius":
-                    unitOutput.Text = ConversionMethods.FahrenheitToCelsius(double.Parse(unitInput.Text));
-                    break;
-            }
-        }
     }
 }

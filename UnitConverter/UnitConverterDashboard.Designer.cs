@@ -79,7 +79,6 @@ namespace UnitConverter
             convertButton.FlatAppearance.BorderColor = SystemColors.Highlight;
             convertButton.FlatAppearance.MouseDownBackColor = Color.Blue;
             convertButton.FlatAppearance.MouseOverBackColor = Color.Blue;
-            convertButton.FlatStyle = FlatStyle.Popup;
             convertButton.Location = new Point(437, 265);
             convertButton.Name = "convertButton";
             convertButton.Size = new Size(149, 36);
