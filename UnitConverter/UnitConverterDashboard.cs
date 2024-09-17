@@ -4,13 +4,9 @@ namespace UnitConverter
 {
     public partial class UnitConverterDashboard : Form
     {
-        private readonly List<string> methods = new List<string>();
-
         public UnitConverterDashboard()
         {
             InitializeComponent();
-
-            WireUpDropDownList();
 
             HeaderLabel.BackColor = Color.Transparent;
 
@@ -20,7 +16,7 @@ namespace UnitConverter
         {
             if (DataValidation())
             {
-                unitOutput.Text = ConversionMethods.ConvertUnits(double.Parse(unitInput.Text), conversionMethodDropDownBox.SelectedItem.ToString());
+                unitOutput.Text = ConversionMethods.ConvertUnits(double.Parse(unitInput.Text), conversionMethodDropDownBox.SelectedItem.ToString()); 
 
             }  
         }
@@ -37,18 +33,5 @@ namespace UnitConverter
            
             return canConvert;
         }
-
-        private void WireUpDropDownList()
-        {
-            methods.Add("Miles to Kilometers");
-            methods.Add("Kilometers to Miles");
-            methods.Add("Pounds to Kilograms");
-            methods.Add("Kilograms to Pounds");
-            methods.Add("Celcius to Farenheit");
-            methods.Add("Fahrenheit to Celsius");
-
-            conversionMethodDropDownBox.DataSource = methods;
-        }
-
     }
 }

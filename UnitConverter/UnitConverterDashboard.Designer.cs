@@ -91,7 +91,9 @@ namespace UnitConverter
             // 
             conversionMethodDropDownBox.AllowDrop = true;
             conversionMethodDropDownBox.Anchor = AnchorStyles.Top;
+            conversionMethodDropDownBox.DropDownStyle = ComboBoxStyle.DropDownList;
             conversionMethodDropDownBox.FormattingEnabled = true;
+            conversionMethodDropDownBox.Items.AddRange(new object[] { "Miles to Kilometers", "Kilometers to Miles", "Pounds to Kilograms", "Kilograms to Pounds", "Celcius to Farenheit", "Fahrenheit to Celsius" });
             conversionMethodDropDownBox.Location = new Point(383, 236);
             conversionMethodDropDownBox.Name = "conversionMethodDropDownBox";
             conversionMethodDropDownBox.Size = new Size(238, 23);
